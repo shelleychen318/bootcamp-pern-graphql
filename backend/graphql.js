@@ -10,6 +10,7 @@ import { makeExecutableSchema, gql } from "apollo-server-express";
 import { merge } from "lodash";
 
 import restaurantType from "./types/restaurantType";
+import reviewerType from "./types/reviewerType";
 import restaurantResolvers from "./resolvers/restaurantResolvers";
 
 /**
@@ -43,6 +44,7 @@ const executableSchema = makeExecutableSchema({
     typeDefs: [
       query,
       mutation,
+      reviewerType,
       restaurantType
     ],
     resolvers: merge(

@@ -26,6 +26,7 @@ const restaurantType = gql`
         budget: Budget
         description: String
         rating: Int
+        review: Review
     }
 
     extend type Query {

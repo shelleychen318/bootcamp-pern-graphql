@@ -44,6 +44,7 @@ server.applyMiddleware({ app, path: "/graphql" });
  * they are safer and offer more fine-grained controls. However, for simplicity, we won't use migrations for bootcamp
  */
 const eraseDatabaseOnSync = false;
+//const eraseDatabaseOnSync = true;
 
 /* sequelize (the variable) is an abstraction over our database connection */
 sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
